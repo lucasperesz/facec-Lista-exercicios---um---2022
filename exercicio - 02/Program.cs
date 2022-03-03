@@ -6,7 +6,16 @@ namespace exercicio___02
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Bem Vindo!");
+            static void Main()
+            {
+                Console.Write("Valor em Reais? ");
+                float reais = float.Parse(Console.ReadLine());
+
+                double usd = reais / 5.22;
+
+                Console.WriteLine("$ = " + usd);
+            }
         }
     }
 }
