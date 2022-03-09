@@ -6,16 +6,25 @@ namespace exercicio___quatro
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Informe o ano de nascimento!");
-            string nascimentoStr = Console.ReadLine();
-            int idade;
-            int anoNascimento;
-            int anoAtual = DateTime.Today.Year;
+            try
+            {
+                Console.WriteLine("Informe sua data de aniversario!");
+                DateTime data = DateTime.Parse(Console.ReadLine());
 
-            int.TryParse(nascimentoStr, out anoNascimento);
-            idade = (anoAtual - anoNascimento);
+                int idade = DateTime.Today.Year - data.Year;
 
-            Console.WriteLine($"A idade é {idade}");
+                if (data.DayOfYear > DateTime.Today.DayOfYear)
+                    idade = idade - 1;
+                Console.WriteLine($"Sua idade é de:  {idade}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.ReadLine();
+            }
         }
     }
 }
