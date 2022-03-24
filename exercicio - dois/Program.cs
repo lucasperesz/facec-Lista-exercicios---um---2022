@@ -7,7 +7,7 @@ namespace exercicio___dois
         static void Main(string[] args)
         {
             Console.WriteLine("Bem Vindo!");
-            static void Main()
+            static void test()
             {
                 Console.Write("Valor em Reais? ");
                 float reais = float.Parse(Console.ReadLine());
